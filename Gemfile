@@ -9,6 +9,7 @@ group :development, :test do
   gem "cucumber-rails" , ">= 0.3.2"
   gem "capybara"
   gem 'database_cleaner'
+  gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
   gem 'factory_girl'
 end
