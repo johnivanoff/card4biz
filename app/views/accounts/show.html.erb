@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @account.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @account.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @account.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @account.state %>
+</p>
+
+<p>
+  <b>Zip code:</b>
+  <%= @account.zip_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
