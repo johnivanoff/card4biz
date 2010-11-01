@@ -18,6 +18,25 @@ Full Screen Mode
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
 
+low hanging fruit
+
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, :placeholder =>'First Name' %>
+    
+    
+    <%= f.label :mobile %><br />
+    <%= f.telephone_field :mobile, :placeholder =>'Mobile' %>
+    
+    
+    <%= f.label :email %><br />
+    <%= f.email_field :email, :placeholder =>'Email',  :autocapitalize => 'off' %>
+
+
+    <%= f.label :web_site %><br />
+    <%= f.url_field :web_site, :placeholder =>'Website' %>
+    
+    add screen shots for low hanging fruit.
+
 links
 "Building iPhone Apps with HTML, CSS, and JavaScript" http://building-iphone-apps.labs.oreilly.com/ 
 "Preparing Your Web Content for iPad" http://developer.apple.com/library/safari/#technotes/tn2010/tn2262/index.html

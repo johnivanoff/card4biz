@@ -15,13 +15,17 @@
     <nav id="header">
       <h1><%= controller.controller_name %></h1>
       <ul>
-        <li><%= link_to 'Accounts', accounts_path, :id => 'account' %></li>
-        <li><%= link_to 'Contacts', contacts_path, :id => 'contact' %></li>
+        <li><%= link_to 'Accounts', accounts_path %></li>
+        <li><%= link_to 'Add New Account', new_account_path %></li>
+        <li><%= link_to 'Contacts', contacts_path %></li>
+        <li><%= link_to 'Add New Contact', new_contact_path %></li>
       </ul>
     </nav>
   </header>
 
-<%= yield %>
+<div id="content">
+  <%= yield %>
+</div>
 
 </body>
 </html>

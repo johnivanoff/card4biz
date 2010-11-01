@@ -21,6 +21,9 @@ nav h1 {
   text-shadow: 0px 1px 0px #fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
 }
+nav ul {
+  margin: 10px;
+} 
 nav ul.hide {
   display: none;
 } 
@@ -40,7 +43,6 @@ div.leftButton {
 }
 ul {
   list-style: none;
-  margin: 10px;
   padding: 0;
 }
 
@@ -55,7 +57,9 @@ ul li a {
   text-decoration: none;
   background: url(/images/listArrow.png) #fff no-repeat right center;
 }
-
+ul li a.selected {
+  background: url(/images/listArrowSel.png) #fff no-repeat right center;
+}
 
 div#needschanged{
   padding-left: 90px;
@@ -68,6 +72,34 @@ div#needschanged h2, div#needschanged p#contact_title, div#needschanged p#contac
 }
 
 
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li a {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    color: #222222;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: -1px;
+    padding: 12px 10px;
+    text-decoration: none;
+}
+ul li:first-child a {
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+ul li:last-child a {
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+ul li a:active,ul li a:hover {
+    background-color: blue;
+    color: white;
+}
 
 dl {
   list-style: none;
@@ -98,38 +130,40 @@ dl dd {
 }
 dl dt:first-child {
   -webkit-border-top-left-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  border-top-left-radius: 8px;
 }
 dl dt:first-child + dd {
   -webkit-border-top-left-radius: 8px;
   -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
 dl dd:last-child {
   -webkit-border-bottom-right-radius: 8px;
   -webkit-border-bottom-left-radius: 8px;
-  -moz-border-radius-bottomright: 8px;
-  -moz-border-radius-bottomleft: 8px;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
 }
 
-#progress {
-    -webkit-border-radius: 10px;
-    background-color: rgba(0,0,0,.7);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    height: 80px;
-    left: 60px;
-    line-height: 80px;
-    margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    top: 120px;
-    width: 200px;
+#content {
+    padding: 10px;
+    text-shadow: 0px 1px 0px #fff;
+}
+
+/* +forms */
+
+label {
+  display: none;
+}
+input {
+  font-size: large;
+  width: 100%;
+}
+input[type="submit"] {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+  -webkit-border-image: url(/images/grayButton.png) 0 8 0 8;
+}
+
+dl#email dd {
+  margin-left: -80px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

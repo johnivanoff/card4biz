@@ -13,13 +13,16 @@
           <dd><%= @contact.work %></dd>
           <dt>mobile</dt>
           <dd><%= @contact.mobile %></dd>
-          <dt>Email</dt>
+    </dl>
+    <dl id="email">
+          <dt>email</dt>
           <dd><%= @contact.email %></dd>
+    </dl>
+    <dl>
           <dt>address</dt>
           <dd><%= link_to @contact.account.full_address, 'http://maps.google.com/maps?q='+@contact.account.full_address %></dd>
     </dl>
 </div>
 
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to 'Edit', edit_contact_path(@contact) %>

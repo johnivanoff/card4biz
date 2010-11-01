@@ -13,32 +13,34 @@
 
   <div class="field">
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, :placeholder =>'First Name' %>
   </div>
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, :placeholder =>'Last Name' %>
   </div>
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder =>'Title' %>
   </div>
   <div class="field">
     <%= f.label :work %><br />
-    <%= f.text_field :work %>
+    <%= f.telephone_field :work, :placeholder =>'Work' %>
   </div>
   <div class="field">
     <%= f.label :mobile %><br />
-    <%= f.text_field :mobile %>
+    <%= f.telephone_field :mobile, :placeholder =>'Mobile' %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.email_field :email, :placeholder =>'Email',  :autocapitalize => 'off' %>
   </div>
+  
   <div class="field">
     <%= f.label :account_id %><br />
-    <%= f.text_field :account_id %>
+    <%= f.text_field :account_id, :placeholder =>'Account Name' %>
   </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
