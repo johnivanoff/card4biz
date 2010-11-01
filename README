@@ -1,1 +1,27 @@
 This is a simple "contact manager"
+
+
+HTML5 doctype
+<!DOCTYPE html>
+
+
+
+Set the css links
+<link rel="stylesheet" type="text/css" href="/stylesheets/iphone.css" media="only screen and (max-width: 480px)" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/scaffold.css" media="screen and (min-width: 481px)" />
+
+Controll the Page Scaling
+<meta name="viewport" content="user-scalable=no, width=device-width" />
+
+make it a web app
+Full Screen Mode
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+links
+"Building iPhone Apps with HTML, CSS, and JavaScript" http://building-iphone-apps.labs.oreilly.com/ 
+"Preparing Your Web Content for iPad" http://developer.apple.com/library/safari/#technotes/tn2010/tn2262/index.html
+"Getting Started with iPhone Web Apps" http://developer.apple.com/library/safari/#referencelibrary/GettingStarted/GS_iPhoneWebApp/index.html%23//apple_ref/doc/uid/TP40008134
+"Safari HTML Reference" http://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariHTMLRef/Introduction.html%23//apple_ref/doc/uid/30001261-SW1
+Forms and HTML5
+"A Form of Madness" http://diveintohtml5.org/forms.html
