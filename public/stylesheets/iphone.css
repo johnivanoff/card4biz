@@ -66,6 +66,12 @@ div#needschanged{
   background: transparent url(/images/person-icon.jpg) 10px 0 no-repeat;
   height: 70px;
 }
+
+
+#accounts div#needschanged{
+  background: transparent url(/images/account-icon.jpg) 10px 0 no-repeat;
+}
+
 div#needschanged h2, div#needschanged p#contact_title, div#needschanged p#contact_company {
   margin: 0;
   width: 200px;
@@ -152,9 +158,10 @@ label {
 }
 input {
   font-size: large;
-  width: 100%;
+  width: 90%;
 }
 input[type="submit"] {
+  width: 95%;
   font-weight: bold;
   text-align: center;
   color: white;

@@ -26,3 +26,11 @@
 
 
 <%= link_to 'Edit', edit_contact_path(@contact) %>
+
+
+<% if !@contact.account.nil? %>
+  <h2>Account</h2>
+  <ul>
+    <li><%= link_to @contact.account.name, account_path(@contact.account) %></li>
+  </ul>
+<% end %>
