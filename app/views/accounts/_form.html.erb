@@ -13,23 +13,27 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder =>'Account Name'%>
   </div>
   <div class="field">
     <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :placeholder =>'Address' %>
   </div>
   <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city %>
+    <%= f.text_field :city, :placeholder =>'City' %>
   </div>
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <%= f.text_field :state, :placeholder =>'State' %>
   </div>
   <div class="field">
     <%= f.label :zip_code %><br />
-    <%= f.text_field :zip_code %>
+    <%= f.telephone_field :zip_code, :placeholder =>'Zip Code' %>
+  </div>
+  <div class="field">
+    <%= f.label :web_site %><br />
+    <%= f.url_field :web_site, :placeholder =>'Website' %>
   </div>
   <div class="actions">
     <%= f.submit %>
