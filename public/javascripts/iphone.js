@@ -8,3 +8,4 @@ if (window.innerWidth && window.innerWidth <= 981) {
         $('#header .leftButton').toggleClass('pressed');
     }
 }
+scrollTo(0,0)
