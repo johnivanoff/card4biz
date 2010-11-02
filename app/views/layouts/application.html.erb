@@ -11,6 +11,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 <body id="<%= controller.controller_name %>">
+<div id="container">
   <header>
     <nav id="header">
       <h1><%= controller.controller_name %></h1>
@@ -26,6 +27,6 @@
 <div id="content">
   <%= yield %>
 </div>
-
+</div>
 </body>
 </html>
