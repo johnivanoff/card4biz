@@ -1,4 +1,4 @@
-if (window.innerWidth && window.innerWidth <= 480) {
+if (window.innerWidth && window.innerWidth <= 981) {
     $(document).ready(function(){ 
         $('#header ul').addClass('hide'); 
         $('#header').append('<div class="leftButton" onclick="toggleMenu()">Menu</div>');
@@ -7,5 +7,4 @@ if (window.innerWidth && window.innerWidth <= 480) {
         $('#header ul').toggleClass('hide'); 
         $('#header .leftButton').toggleClass('pressed');
     }
-  scrollTo(0,0);
 }

@@ -57,19 +57,16 @@ ul li a {
   text-decoration: none;
   background: url(/images/listArrow.png) #fff no-repeat right center;
 }
-ul li a.selected {
-  background: url(/images/listArrowSel.png) #fff no-repeat right center;
-}
 
 div#needschanged{
   padding-left: 90px;
-  background: transparent url(/images/person-icon.jpg) 10px 0 no-repeat;
+  background: transparent url(/images/person-icon.jpg) 0 0 no-repeat;
   height: 70px;
 }
 
 
 #accounts div#needschanged{
-  background: transparent url(/images/account-icon.jpg) 10px 0 no-repeat;
+  background: transparent url(/images/account-icon.jpg) 0 0 no-repeat;
 }
 
 div#needschanged h2, div#needschanged p#contact_title, div#needschanged p#contact_company {
@@ -102,9 +99,10 @@ ul li:last-child a {
     -webkit-border-bottom-left-radius: 8px;
     -webkit-border-bottom-right-radius: 8px;
 }
-ul li a:active,ul li a:hover {
+ul li a:active, ul li a:hover {
     background-color: blue;
     color: white;
+	background: url(/images/listArrowSel.png) #fff no-repeat right center;
 }
 
 dl {
