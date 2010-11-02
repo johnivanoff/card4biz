@@ -1,40 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>First name:</b>
-  <%= @contact.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
-  <%= @contact.last_name %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @contact.title %>
-</p>
-
-<p>
-  <b>Work:</b>
-  <%= @contact.work %>
-</p>
-
-<p>
-  <b>Mobile:</b>
-  <%= @contact.mobile %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @contact.email %>
-</p>
-
-<p>
-  <b>Account:</b>
-  <%= @contact.account_id %>
-</p>
+<div class="contact">
+  <div id="needschanged">
+    <h2><%= @contact.full_name %></h2>
+    <p id="contact_title"><%= @contact.title %></p>
+    <p id="contact_company"><%= @contact.account.name %></p>
+  </div>
 
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+    <dl>
+          <dt>work</dt>
+          <dd><%= @contact.work %></dd>
+          <dt>mobile</dt>
+          <dd><%= @contact.mobile %></dd>
+    </dl>
+    <dl id="email">
+          <dt>email</dt>
+          <dd><%= @contact.email %></dd>
+    </dl>
+    <dl>
+          <dt>address</dt>
+          <dd><%= link_to @contact.account.full_address, 'http://maps.google.com/maps?q='+@contact.account.full_address %></dd>
+    </dl>
+</div>
+
+
+<%= link_to 'Edit', edit_contact_path(@contact) %>
+
+
+<% if !@contact.account.nil? %>
+  <h2>Account</h2>
+  <ul>
+    <li><%= link_to @contact.account.name, account_path(@contact.account) %></li>
+  </ul>
+<% end %>

@@ -1,30 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @account.name %>
-</p>
+<div class="contact">
+  <div id="needschanged">
+    <h2><%= @account.name %></h2>
+  </div>
 
-<p>
-  <b>Address:</b>
-  <%= @account.address %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @account.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @account.state %>
-</p>
-
-<p>
-  <b>Zip code:</b>
-  <%= @account.zip_code %>
-</p>
+    <dl>
+          <dt>address</dt>
+          <dd><%= link_to @account.full_address, 'http://maps.google.com/maps?q='+@account.full_address %></dd>
+    </dl>
+</div>
 
 
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+<%= link_to 'Edit', edit_account_path(@account) %>
+
+<% if !@account.contacts.nil? %>
+  <h2>contacts</h2>
+  <ul>
+  <% @account.contacts.each do |contact| %>
+    <li><%= link_to contact.full_name, contact %></li>
+  <% end %>
+  </ul>
+<% end %>
