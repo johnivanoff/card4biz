@@ -1,14 +1,3 @@
-if (window.innerWidth && window.innerWidth <= 981) {
-    $(document).ready(function(){ 
-        $('#header ul').addClass('hide'); 
-        $('#header').append('<div class="rightButton" onclick="toggleMenu()">Menu</div>');
-    }); 
-    function toggleMenu() {
-        $('#header ul').toggleClass('hide'); 
-        $('#header .rightButton').toggleClass('pressed');
-    }
-}
-
 var hist = [];
 var startUrl = '/';
 $(document).ready(function(){
@@ -23,7 +12,7 @@ function loadPage(url) {
         var element = ' #content';
     }
     $('#container').load(url + element, function(){
-        var title = $('h1').html() || 'ugh!';
+        var title = $('h2').html() || 'Home';
         $('h1').html(title); 
 		/*
 		$('h1').remove();
