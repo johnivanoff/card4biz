@@ -4,7 +4,11 @@
   <div id="needschanged">
     <h2><%= @contact.full_name %></h2>
     <p id="contact_title"><%= @contact.title %></p>
-    <p id="contact_company"><%= @contact.account.name %></p>
+    <p id="contact_company">
+      <% if !@contact.account.nil? %>
+        <%= @contact.account.name %>
+      <% end %>
+    </p>
   </div>
 
 
@@ -18,10 +22,14 @@
           <dt>email</dt>
           <dd><%= @contact.email %></dd>
     </dl>
-    <dl>
-          <dt>address</dt>
-          <dd><%= link_to @contact.account.full_address, 'http://maps.google.com/maps?q='+@contact.account.full_address %></dd>
-    </dl>
+    <% if !@contact.account.nil? %>
+      <dl>
+            <dt>address</dt>
+            <dd>
+              <%= link_to @contact.account.full_address, 'http://maps.google.com/maps?q='+@contact.account.full_address %>
+            </dd>
+      </dl>
+    <% end %>
 </div>
 
 
