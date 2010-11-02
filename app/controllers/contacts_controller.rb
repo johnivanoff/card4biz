@@ -46,6 +46,7 @@ class ContactsController < ApplicationController
       if @contact.save
         format.html { redirect_to(@contact, :notice => 'Contact was successfully created.') }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
+        format.js
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @contact.errors, :status => :unprocessable_entity }

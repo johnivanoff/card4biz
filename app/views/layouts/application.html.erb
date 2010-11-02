@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>Card4biz</title>
-  <script type="text/javascript" src="/javascripts/jquery.js"></script>
-  <script type="text/javascript" src="/javascripts/iphone.js"></script>
+  <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
   <link rel="stylesheet" type="text/css" href="/stylesheets/iphone.css" media="only screen and (max-width: 480px)" />
   <link rel="stylesheet" type="text/css" href="/stylesheets/scaffold.css" media="screen and (min-width: 481px)" />
@@ -24,9 +23,9 @@
     </nav>
   </header>
 
-<div id="content">
-  <%= yield %>
-</div>
+  <div id="content">
+    <%= yield %>
+  </div>
 </div>
 </body>
 </html>
