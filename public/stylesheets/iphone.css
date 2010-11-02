@@ -108,7 +108,7 @@ ul li a:active, ul li a:hover {
 dl {
   list-style: none;
   padding: 0;
-  padding: 12px 10px;
+  padding: 12px 0;
 }
 dl dt, dl dd {
   background-color: #fff;
