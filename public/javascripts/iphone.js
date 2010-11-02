@@ -1,6 +1,4 @@
-//if (window.innerWidth && window.innerWidth <= 981) {
-
-alert('really ' + window.innerWidth)
+if (window.innerWidth && window.innerWidth <= 480) {
 
 var hist = [];
 var startUrl = '/';
@@ -18,6 +16,9 @@ function loadPage(url) {
     $('#container').load(url + element, function(){
         var title = $('h2').html() || 'Home';
         $('h1').html(title); 
+		/*
+		$('h1').remove();
+        */
 		$('.leftButton').remove();
         hist.unshift({'url':url, 'title':title});
         if (hist.length > 1) {
@@ -40,4 +41,4 @@ function loadPage(url) {
     });
 }
 
-//}
+}
