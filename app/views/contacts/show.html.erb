@@ -20,7 +20,7 @@
     </dl>
     <dl id="email">
           <dt>email</dt>
-          <dd><%= @contact.email %></dd>
+          <dd><%= mail_to @contact.email, @contact.email, :encode => "hex" %></dd>
     </dl>
     <% if !@contact.account.nil? %>
       <dl>

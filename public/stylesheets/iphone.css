@@ -182,12 +182,6 @@ input[type="submit"] {
   -webkit-border-image: url(/images/grayButton.png) 0 8 0 8;
 }
 
-dl#email dd {
-  margin-left: -80px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 #progress { 
 	-webkit-border-radius: 10px; 
 	background-color: rgba(0,0,0,.7); 
@@ -202,4 +196,13 @@ dl#email dd {
 	text-align: center; 
 	top: 120px; 
 	width: 200px;
+}
+
+dl#email dd {
+/*
+*/
+margin-left: -80px;
+overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
