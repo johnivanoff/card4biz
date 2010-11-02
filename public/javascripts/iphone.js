@@ -1,3 +1,5 @@
+if (window.innerWidth && window.innerWidth <= 480) {
+
 var hist = [];
 var startUrl = '/';
 $(document).ready(function(){
@@ -37,4 +39,6 @@ function loadPage(url) {
         });
         $('#progress').remove();
     });
+}
+
 }
